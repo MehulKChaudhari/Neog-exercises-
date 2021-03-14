@@ -57,7 +57,91 @@
 
     console.log(incAndDec)
 
-    
+//Question 6  Return an object with sum of all odd numbers and even numbers seperately. 
+
+const numArr = [1,2,3,4,10,22,15,36,50,28];
+
+const evenAndOddSum = arr =>{ 
+  const obj ={}
+    const oddNumArr = arr.filter(num => num%2 !==0);
+
+    console.log(oddNumArr);
+    const evenNumArr = arr.filter(num => num%2 ==0);
+
+    console.log(evenNumArr);
+
+    const oddSum = oddNumArr.reduce((acc,currval) => {
+        return acc+currval;
+    })
+
+    const evenSum = evenNumArr.reduce((acc,currval) => {
+        return acc+currval;
+    })
+
+    obj.odd = oddSum;
+    obj.even = evenSum;
+
+    return obj;
+
+}
+evenAndOddSum(numArr);
+
+//Given That array of strings
+
+//Question 1 Find the Number of strings with similar no of characters 
+
+
+    const array = ["apple", "mango","orange", "papaya"];
+
+    const similarLengthStrings=array=>{
+    const obj = {};
+
+    array.forEach(item => {
+        if(obj[item.length]==1){
+        obj[item.length] = obj[item.length] +1 
+        } else{
+        obj[item.length] = 1 
+        }
+    }) 
+    return obj;  
+    }
+
+
+    console.log(similarLengthStrings(array))
+
+    //Question 2 return an array which has strings having vowels. 
+
+
+        const array = ["apple", "mango","orange", "papaya","hjklkjh","yhghfgh","aeiou", "djgfhfrio"];
+
+        const newArr = (array) => {
+        const str = array.filter(item => item.match(/[aeiou]/g))
+        return str 
+        }
+
+
+        console.log(newArr(array));
+
+    //Question 3 return string as key and string length as value
+
+        const input = ["apple", "orange","kiwi","berry","strawberry"]
+
+        const length = item => item.length;
+
+        const obj = (acc, item) => {
+            acc[item]=length(item);
+            return acc;  
+        }
+        const reducer = a =>a.reduce(obj,{});
+
+        console.log(reducer(input))
+
+        //other way to use only one function and call immediately empty object
+        // const reducer = a =>a.reduce((acc,item) =>{
+        //     acc[item]=length(item);
+        //     return acc;
+        //   },
+        //   {});
 
 
 
