@@ -28,7 +28,7 @@
 
     for(i =0;i < numArr.length; ++i){
         if(numArr[0] < numArr[i]){
-        numArr[0] = numArr[i]
+            numArr[0] = numArr[i]
     }
     }
     const biggestNumInArr = numArr[0];
@@ -59,59 +59,59 @@
 
 //Question 6  Return an object with sum of all odd numbers and even numbers seperately. 
 
-const numArr = [1,2,3,4,10,22,15,36,50,28];
+        const numArr = [1,2,3,4,10,22,15,36,50,28];
 
-const evenAndOddSum = arr =>{ 
-  const obj ={}
-    const oddNumArr = arr.filter(num => num%2 !==0);
+        const evenAndOddSum = arr =>{ 
+        const obj ={}
+            const oddNumArr = arr.filter(num => num%2 !==0);
 
-    console.log(oddNumArr);
-    const evenNumArr = arr.filter(num => num%2 ==0);
+            console.log(oddNumArr);
+            const evenNumArr = arr.filter(num => num%2 ==0);
 
-    console.log(evenNumArr);
+            console.log(evenNumArr);
 
-    const oddSum = oddNumArr.reduce((acc,currval) => {
-        return acc+currval;
-    })
+            const oddSum = oddNumArr.reduce((acc,currval) => {
+                return acc+currval;
+            })
 
-    const evenSum = evenNumArr.reduce((acc,currval) => {
-        return acc+currval;
-    })
+            const evenSum = evenNumArr.reduce((acc,currval) => {
+                return acc+currval;
+            })
 
-    obj.odd = oddSum;
-    obj.even = evenSum;
+            obj.odd = oddSum;
+            obj.even = evenSum;
 
-    return obj;
+            return obj;
 
-}
-evenAndOddSum(numArr);
+        }
+        evenAndOddSum(numArr);
 
 //Given That array of strings
 
-//Question 1 Find the Number of strings with similar no of characters 
+    //Question 1 Find the Number of strings with similar no of characters 
 
 
-    const array = ["apple", "mango","orange", "papaya"];
+        const array = ["apple", "mango","orange", "papaya"];
 
-    const similarLengthStrings=array=>{
-    const obj = {};
+        const similarLengthStrings=array=>{
+        const obj = {};
 
-    array.forEach(item => {
-        if(obj[item.length]==1){
-        obj[item.length] = obj[item.length] +1 
-        } else{
-        obj[item.length] = 1 
+        array.forEach(item => {
+            if(obj[item.length]==1){
+            obj[item.length] = obj[item.length] +1 
+            } else{
+            obj[item.length] = 1 
+            }
+        }) 
+        return obj;  
         }
-    }) 
-    return obj;  
-    }
 
 
-    console.log(similarLengthStrings(array))
+        console.log(similarLengthStrings(array))
 
     //Question 2 return an array which has strings having vowels. 
 
-
+            //Reference MDN .match docs 
         const array = ["apple", "mango","orange", "papaya","hjklkjh","yhghfgh","aeiou", "djgfhfrio"];
 
         const newArr = (array) => {
