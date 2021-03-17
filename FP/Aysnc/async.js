@@ -61,7 +61,34 @@ const messagePrinter = (message, delay) =>{
           }
         }
         printdata("Mehul"); 
-        //printdata("Mehul",true); //If want to check error handling uncomment this and comment the abouve function call
+        //printdata("Mehul",true); //If want to check error handling uncomment this and comment the abouve function call\
+
+/// Question ex13: chaining using async-await
+
+    const getServerResponseLength = async (msg,shouldReject) => {
+      try{
+        const data = await fakeFetch(msg,shouldReject);
+        return console.log("the data from server is ",data.length,"characters long");
+      } catch(error){
+        console.log(error);
+      } 
+
+    }
+
+    getServerResponseLength("Mehul",true);
+
+//question ex14: waterfall data 
+
+  const syncCallToserver = async (msg1, msg2) =>{
+    try {
+      const data = await fakeFetch(msg1);
+      const data2 = await fakeFetch(data + msg2);
+      console.log(data2)
+    } catch(error){
+      console.log(error);
+    }
+  }
+  syncCallToserver("MEhul ", "Chaudhari");
 
 
 
