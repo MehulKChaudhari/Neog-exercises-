@@ -9,34 +9,34 @@
 
 //Question 2 Write a program to take a number input from user and determine whether the number is odd or even.
 
-        var number = prompt('Enter the number to check whether it is even or not ');
+        // var number = prompt('Enter the number to check whether it is even or not ');
 
-        const evenOrOdd = (num) =>{
-            if(num%2 ==0){
-            return "The number is even";
-            }
-            else{
-            return "The number is odd";
-            }
-        }
+        // const evenOrOdd = (num) =>{
+        //     if(num%2 ==0){
+        //     return "The number is even";
+        //     }
+        //     else{
+        //     return "The number is odd";
+        //     }
+        // }
         
-        console.log(evenOrOdd(number));
+        // console.log(evenOrOdd(number));
 
 //Question 3 Write a program to find the maximum and minimum out of two given numbers. The numbers are num1=129 and num2=251.
 
-        const minOrMax = (num1,num2)=>{
+        // const minOrMax = (num1,num2)=>{
 
-            if (num1<num2){
-            console.log("The maximum number is : ",num2); 
-            console.log("The minimum number is :",num1);
-            } else{
-                console.log("The maximum number is : ",num1); 
-            console.log("The minimum number is :",num2);
-            }
-            }
+        //     if (num1<num2){
+        //     console.log("The maximum number is : ",num2); 
+        //     console.log("The minimum number is :",num1);
+        //     } else{
+        //         console.log("The maximum number is : ",num1); 
+        //     console.log("The minimum number is :",num2);
+        //     }
+        //     }
         
-            minOrMax(40,55);
-            minOrMax(36,12);
+        //     minOrMax(40,55);
+        //     minOrMax(36,12);
 
 // Question 4 Write a program to find the maximum out of three given numbers. The numbers are num1=8, num2=23 and num3=17.
 
